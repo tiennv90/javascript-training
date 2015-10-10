@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			(function() {
+
+				var person = new Object();
+				person.firstName = "James";
+				person.lastName = "David";
+
+				function pageReady() {
+					btnFirstName.addEventListener("click", function() {
+						console.log("Btn First Name");
+					});
+
+					btnShowFirstName.addEventListener("click", function() {
+						document.getElementById("first").innerHTML = person.firstName;
+					});
+				}
+
+				window.addEventListener("load", pageReady);
+			})();
+		</script>	
+	</head>
+	<body>
+		<form>
+			<input type="button" value="firstName" id="btnFirstName" />
+			<input type="button" value="show First Name" id="btnShowFirstName">
+		</form>
+		<div id = "first"/>
+	</body>
+</html>

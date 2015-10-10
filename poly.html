@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			(function() {
+
+				function addNumberTwoArguments(a , b) {
+					return a + b;
+				}
+
+				function addNumberThreeArguments(a, b, c) {
+					return a + b + c;
+				}
+
+				function addNumber(a, b, c) {
+					if (arguments.length == 2) {
+						return addNumberTwoArguments(a, b);
+					} else if (arguments.length == 3) {
+						return addNumberThreeArguments(a, b, c);
+					}
+				}
+
+				window.addEventListener('load', function() {
+					console.log(addNumber(1,3));
+					console.log(addNumber(1,3,5));
+				});
+			})();
+		</script>
+	</head>
+	<body>
+		<p>Hi Javascript</p>
+	</body>
+</html>
