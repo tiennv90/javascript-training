@@ -17,8 +17,8 @@ function Cart(divNumItems, divItems) {
 
 		computeCart();
 		updateCartDisplay();
-		console.log(cart);
-		console.log(cart.length);
+		//console.log(cart);
+		//console.log(cart.length);
 	}
 
 	function addNewProduct(product) {
@@ -36,8 +36,8 @@ function Cart(divNumItems, divItems) {
 		}
 
 		cartTotal = Math.round(cartTotal * 100) / 100;
-		console.log(cartTotal);
-		console.log(cartCount);
+		//console.log(cartTotal);
+		//console.log(cartCount);
 	}
 
 	function updateCartDisplay() {
