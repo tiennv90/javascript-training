@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>JS Grocer</title>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="js/cart.js" type="text/javascript"></script>
+		<script src="js/grocer.js" type="text/javascript"></script>		
+	</head>
+	<body>
+		<h1>JS Grocer</h1>
+		<div id="products">
+			<h2>Dairy</h2>
+			<div class="product">
+				<div class="prodName">Milk</div>
+				<img src="images/dairy_milk.jpg" class="img">
+				<span class="prodDesc">Direct from Vermont where the cows are happiest</span>
+				<span class="price">$1.99</span>
+				<button class="btn" id="milkbutton">Add to cart</button>
+			</div>
+			<div class="product">
+				<div class="prodName">Swiss Cheese</div>
+				<img src="images/dairy_swiss.jpg" class="img">
+				<span class="prodDesc">Imported from Switzerland, this cheese has world class flavor</span>
+				<span class="price">$4.99</span>
+				<button class="btn" id="cheesebutton">Add to cart</button>
+			</div>
+			<div class="product">
+				<div class="prodName">Yogurt</div>
+				<img src="images/dairy_yogurt.jpg" class="img">
+				<span class="prodDesc">mix flavor</span>
+				<span class="price">$1.99</span>
+				<button class="btn" id="yogurtbutton">Add to cart</button>
+			</div>						
+		</div>
+		<div id="cart">
+			<h2>Cart</h2>
+			<div id="numItems">You have 0 item(s) in your cart</div>
+			<div id="items"></div>
+		</div>
+	</body>
+</html>
