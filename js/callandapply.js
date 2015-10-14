@@ -28,6 +28,8 @@ hello.speak.call(goodbye, 'Ethan');
 hello.speak.apply(goodbye, ['Ethan']);
 goodbye.speak.apply(hello, ['Ethan']);
 
+
+
 var speak = hello.speak;
 speak('Ethan');
 speak.call(hello, 'Ethan');
@@ -55,3 +57,29 @@ var robotRegistry = {
 
 robots.forEach(robotRegistry.addRobot, robotRegistry);
 robotRegistry.robots;
+
+//----------------
+
+var hello = {
+    name : "Welcomebot",
+    speak : function (to) {
+        console.log( this.name + 'say "welcome, ' + to + '."' );
+    }
+}
+
+var goodbye = {
+    name : "Farewellbot",
+    speak : function (to) {
+        console.log( this.name + 'say "Goodbye, ' + to + '."' );
+    }
+}
+
+var speak = hello.speak;
+speak('Ethan');
+speak = hello.speak.bind(hello);
+speak('Ethan');
+speak.call(goodbye, 'Ethan');
+
+setTimeout(hello.speak, 2000);
+setTimeout(hello.speak, 2000, 'Ethan');
+setTimeout(hello.speak.bind(hello), 2000, 'Ethan');
