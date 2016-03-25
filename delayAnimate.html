@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>delay demo</title>
+  <style>
+  div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    float: left;
+  }
+  .first {
+    background-color: #3f3;
+    left: 0;
+  }
+  .second {
+    background-color: #33f;
+    left: 80px;
+  }
+  .third {
+    background-color: greenyellow;
+    left: 160px;
+  }
+  .fourth {
+    background-color: rebeccapurple;
+    left: 240px;
+  }
+  .fiveth {
+    background-color: red;
+    left: 320px;
+  }
+  </style>
+<script src="js/jquery-1.12.0.js"></script>
+</head>
+<body>
+
+<p><button>Run</button></p>
+<div class="first"></div>
+<div class="second"></div>
+<div class="third"></div>
+<div class="fourth"></div>
+<div class="fiveth"></div>
+<script>
+var delayTime = 50;
+$( "button" ).click(function() {
+    animate();
+    setInterval(animate, delayTime * 10 * 5);
+});
+
+function animate(){
+  console.log("call");
+  $( "div.first" ).slideUp( 300 ).delay(0).fadeIn( 500 ).fadeOut(500);
+  $( "div.second" ).fadeOut(0).delay(delayTime * 10).slideUp( 300 ).fadeIn( 400 ).fadeOut(500);
+  $( "div.third" ).fadeOut(0).delay(delayTime * 10 * 2).slideUp( 300 ).fadeIn( 400 ).fadeOut(500);
+  $( "div.fourth" ).fadeOut(0).delay(delayTime * 10 * 3).slideUp( 300 ).fadeIn( 400 ).fadeOut(500);
+  $( "div.fiveth" ).fadeOut(0).delay(delayTime * 10 * 4).slideUp( 300 ).fadeIn( 400 ).fadeOut(500);
+}
+</script>
+
+</body>
+</html>
