@@ -33,8 +33,7 @@ cart3.total();
 var cart4 = {
     subTotal : function () {
         return 15;
-    }
-    
+    },
     total : function () {
         function getTax() {
             return this.subTotal * this.taxRate;

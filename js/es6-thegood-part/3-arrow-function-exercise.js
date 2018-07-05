@@ -44,8 +44,3 @@ var foo = x => x > 5 ? x : 1;
 		}, 0 ) );
 	}, 200 );
 })();
-
-//convert to arrow function
-(
-	
-)();
